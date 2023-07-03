@@ -1,0 +1,158 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* 400 500 600 700 */
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ff7978;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.descrption-section {
+  color: white;
+}
+
+.descrption-section h1 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.descrption-section p {
+  font-weight: 400;
+}
+
+.free-trial {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: var(--grayish-blue);
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 4px 0 var(--dark-blue);
+}
+
+.free-trial span {
+  color: white;
+  font-weight: 500;
+}
+
+.signup-section form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 #c4c4c479;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid #eee;
+  padding-left: 25px;
+  color: var(--dark-blue);
+  caret-color: var(--blue);
+}
+
+.input:focus {
+  border-color: var(--blue);
+}
+
+.submit-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+.submit-input:hover {
+  opacity: 0.5;
+}
+
+.signup-section form p {
+  font-size: 10px;
+  color: var(--grayish-blue);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-section form p a {
+  text-decoration: none;
+  font-size: inherit;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.signup-section form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.error {
+  display: none;
+  justify-content: flex-end;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.error-icon {
+  width: 20px;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  transform: translateY(-50%);
+}
